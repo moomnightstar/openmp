@@ -6,7 +6,7 @@ using namespace std;
 static long num_steps = 100000;
 
 void cal_pi1() {
-	//´®ÐÐ
+	//ä¸²è¡Œ
 	int i;
 	double x,pi, sum = 0;
 	double step = 1.0 / num_steps;
@@ -17,7 +17,7 @@ void cal_pi1() {
 	pi = sum*step;
 	cout << "pi is " << pi << endl;
 }
-void cal_pi2() { //²¢ÐÐÓò
+void cal_pi2() { //å¹¶è¡ŒåŸŸ
 	int i;
 	double x, pi, sum[NUM_THREADS];
 	double step = 1.0 / num_steps;
@@ -35,7 +35,7 @@ void cal_pi2() { //²¢ÐÐÓò
 	}
 	cout << "pi is " << pi << endl;
 }
-void cal_pi3() {//¹²ÏíÈÎÎñ»ú¹¹
+void cal_pi3() {//å…±äº«ä»»åŠ¡æœºæž„
 	int i;
 	double x, pi, sum[NUM_THREADS];
 	double step = 1.0 / num_steps;
@@ -55,7 +55,7 @@ void cal_pi3() {//¹²ÏíÈÎÎñ»ú¹¹
 	}
 	cout << "pi is " << pi << endl;
 }
-void cal_pi4() {//privateºÍcritical×Ó¾ä
+void cal_pi4() {//privateå’Œcriticalå­å¥
 	int i;
 	double x, pi=0, sum;
 	double step = 1.0 / num_steps;
@@ -72,7 +72,7 @@ void cal_pi4() {//privateºÍcritical×Ó¾ä
 	}
 	cout << "pi is " << pi << endl;
 }
-void cal_pi5() {//²¢ÐÐ¹éÔ¼
+void cal_pi5() {//å¹¶è¡Œå½’çº¦
 	int i;
 	double x, pi, sum=0;
 	double step = 1.0 / num_steps;
@@ -86,16 +86,16 @@ void cal_pi5() {//²¢ÐÐ¹éÔ¼
 	cout << "pi is " << pi << endl;
 }
 int main() {
-	cout << "1.´®ÐÐËã·¨¼ÆËãPi" << endl;
+	cout << "1.ä¸²è¡Œç®—æ³•è®¡ç®—Pi" << endl;
 	cal_pi1();
-	cout << "Ê¹ÓÃopenmp²¢ÐÐ¼ÆËãpi" << endl;
-	cout << "2.ÓÃ²¢ÐÐÓò¼ÆËãPi" << endl;
+	cout << "ä½¿ç”¨openmpå¹¶è¡Œè®¡ç®—pi" << endl;
+	cout << "2.ç”¨å¹¶è¡ŒåŸŸè®¡ç®—Pi" << endl;
 	cal_pi2();
-	cout << "3.ÓÃ¹²ÏíÈÎÎñ½á¹¹¼ÆËãPi" << endl;
+	cout << "3.ç”¨å…±äº«ä»»åŠ¡ç»“æž„è®¡ç®—Pi" << endl;
 	cal_pi3();
-	cout << "4.ÓÃprivateºÍcritical×Ó¾ä¼ÆËãPi" << endl;
+	cout << "4.ç”¨privateå’Œcriticalå­å¥è®¡ç®—Pi" << endl;
 	cal_pi4();
-	cout << "5.ÓÃ²¢ÐÐ¹éÔ¼¼ÆËãPi" << endl;
+	cout << "5.ç”¨å¹¶è¡Œå½’çº¦è®¡ç®—Pi" << endl;
 	cal_pi5();
 	return 0;
 }
